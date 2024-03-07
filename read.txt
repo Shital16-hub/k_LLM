@@ -1,0 +1,3 @@
+Question: Which technology was developed most recently? (A) cellular telephone (B) television (C) refrigerator (D) airplane
+Answer: 
+Specify only A , B, C or D if the answer is from the options and give in format 'Answer- '"

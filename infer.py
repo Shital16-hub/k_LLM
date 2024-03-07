@@ -1,4 +1,4 @@
- import torch
+import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from torch.nn.parallel import DataParallel
 
@@ -37,4 +37,11 @@ def do_inference(prompt):
 
     gen_tokens = model.generate(input_ids, do_sample=True, max_length=400, pad_token_id=tokenizer.eos_token_id)
 
-    return tokenizer.batch_decode(gen_tokens)[0]
+    print(tokenizer.batch_decode(gen_tokens)[0])
+
+# Open the file in read mode
+with open('read.tex', 'r') as file:
+    # Read the contents of the file
+    prompt = file.read()
+
+do_inference(prompt)
